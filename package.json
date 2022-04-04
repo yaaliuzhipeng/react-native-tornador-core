@@ -1,0 +1,44 @@
+{
+  "name": "@tornador/core",
+  "version": "1.0.0",
+  "description": "amazing modal resolution",
+  "main": "index.ts",
+  "files": [
+    "README.md",
+    "index.ts",
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaaliuzhipeng/react-native-tornador-core.git"
+  },
+  "keywords": [
+    "react-native",
+    "rn",
+    "tornador",
+    "modal",
+    "overlay"
+  ],
+  "publishConfig": {
+
+  },
+  "author": "yaaliuzhipeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yaaliuzhipeng/react-native-tornador-core/issues"
+  },
+  "homepage": "https://github.com/yaaliuzhipeng/react-native-tornador-core#readme",
+  "devDependencies": {
+    "react": ">=16.9.0",
+    "react-native": ">=0.67.0",
+    "typescript": ">=4.3.0"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.67.0",
+    "typescript": "^4.3.0"
+  }
+}
