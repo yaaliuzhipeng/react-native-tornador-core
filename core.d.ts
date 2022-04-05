@@ -1,4 +1,8 @@
-
+declare const global:any;
+declare namespace Tornador {
+    export type Size = { width: number, height: number };
+    export type Rect = Size;
+}
 declare const font:(fontsize: number) => number;
 declare const ft:(v:number) => number;
 declare const fth:(v:number) => number;
