@@ -1,4 +1,4 @@
-import { Platform,Dimensions } from 'react-native'
+import { Platform } from 'react-native'
 import {ft,fth,pixel,di,dw,de,ww,wh,isNil,isType} from './core'
 
 global.ft = ft;
