@@ -22,6 +22,17 @@ export function __turnOnTranslucentStatusBar(
     StatusBar.setBarStyle(barStyle, animated);
   }
 }
+export function __injectGlobalProperties(properties:Record<string,any>){
+  if(typeof properties == 'object'){
+    for(let key of Object.keys(properties)){
+      if(global[key] == undefined){
+        global[key] = properties[key];
+      }else{
+        console.warn("You're overriding existed global property(operation ignored by default): ",key)
+      }
+    }
+  }
+}
 
 const ww = Math.min(sw, sh);
 const wh = Math.max(sw, sh);
