@@ -25,7 +25,6 @@ declare const isIos: boolean;
 declare const isMac: boolean;
 declare const isWeb: boolean;
 declare const isWin: boolean;
-declare const fxs: any;
 
 type TypeKind = 'string' | 'function' | 'null' | 'undefined' | 'number';
 declare const isType: (target: any, type: TypeKind) => boolean;
