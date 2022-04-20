@@ -1,5 +1,5 @@
 import { Platform } from 'react-native'
-import {ft,fth,pixel,di,dw,de,ww,wh,isNil,isType} from './core'
+import {ft,fth,pixel,di,dw,de,ww,wh,isNil,isType,formatDate,formatHourMinutes} from './core'
 
 global.ft = ft;
 global.fth = fth;
@@ -21,3 +21,7 @@ global.isWin = Platform.OS === 'windows';
 
 global.isType = isType;
 global.isNil = isNil;
+
+global.times = {
+    formatDate
+}

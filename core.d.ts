@@ -29,3 +29,15 @@ declare const isWin: boolean;
 type TypeKind = 'string' | 'function' | 'null' | 'undefined' | 'number';
 declare const isType: (target: any, type: TypeKind) => boolean;
 declare const isNil: (target: any) => boolean;
+
+declare const times: {
+    /**
+     * YYYY | yyyy  =>  2021
+     * MM  =>  month, 12
+     * DD  =>  day, 16
+     * HH  =>  hour, 18
+     * mm  =>  minute, 52
+     * ss  =>  second, 02
+     */
+    formatDate: (date: Date, fmt: string) => string;
+}
