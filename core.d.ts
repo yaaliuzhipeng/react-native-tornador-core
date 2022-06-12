@@ -8,6 +8,14 @@ declare namespace Tornador {
         shadowRadius: number;
         shadowOffset: { width: number, height: number };
     }
+    export type LayoutMeasurements = {
+        x: number;
+        y: number;
+        width: number;
+        height: number;
+        pageX: number;
+        pageY: number;
+    }
 }
 declare const font: (fontsize: number) => number;
 declare const ft: (v: number) => number;
