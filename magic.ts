@@ -25,6 +25,20 @@ class magic {
         }
         return nil
     }
+
+    /**
+     * 遍历数组、找到符合条件的item的数量
+     */
+    static countIt(it: Array<any>, pr: (item: any, index: number) => boolean): number {
+        let c = 0;
+        for (let i = 0; i < it.length; i++) {
+            let item = it[i];
+            if (pr(item, i)) {
+                c += 1;
+            }
+        }
+        return c;
+    }
 }
 
 export default magic
