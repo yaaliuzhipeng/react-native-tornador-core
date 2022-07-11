@@ -39,6 +39,34 @@ class magic {
         }
         return c;
     }
+
+    static take(
+        obj: Record<any, any>,
+        pros?: Array<string | number | [string, string[]]>,
+    ) {
+        let n = {};
+        if (pros == undefined) return ({ ...obj });
+        for (let p of pros) {
+            if (typeof p == 'string' || typeof p == 'number') {
+                n[p] = obj[p]
+            } else {
+                //{person:{name: 'example'}} | ['person','name']
+                let [key, properties] = p;
+                if (Array.isArray(properties) && properties.length > 0) {
+                    let o = obj;
+                    let itered = false;
+                    for (let subp of properties) {
+                        if (!itered) itered = true;
+                        o = o[subp];
+                        if (typeof o != 'object' || o == null) break;
+                    }
+                    if (itered == false) o = undefined;
+                    n[key] = o;
+                }
+            }
+        }
+        return n;
+    }
 }
 
 export default magic
