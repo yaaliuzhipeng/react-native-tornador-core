@@ -67,6 +67,30 @@ class magic {
         }
         return n;
     }
+    static joinPath(...args: string[]) {
+        let pr = []
+        for (let p of args) {
+            pr = pr.concat(p.split('/').filter((v) => v != ''))
+        }
+        return `/${pr.join('/')}`
+    }
+    static filename(path: string, withExt?: boolean) {
+        let seg = path.split('/');
+        if (seg.length < 1) {
+            return ['', null]
+        }
+        let name = seg[seg.length - 1];
+        if (withExt) {
+            seg = name.split('.')
+            if (seg.length > 1) {
+                return [name, seg[seg.length - 1]]
+            } else { // 0 | 1
+                return [name, null]
+            }
+        } else {
+            return [name, null]
+        }
+    }
 }
 
 export default magic
